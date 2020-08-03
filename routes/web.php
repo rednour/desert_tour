@@ -26,3 +26,12 @@ Route::get('/', function(){
 
 route::resource('/clients','ClientController')->only('show');
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+Route::resource('/tours','TourController');
+
+Route::resource('/image','ImgtourController');
